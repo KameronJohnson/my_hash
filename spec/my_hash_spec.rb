@@ -9,4 +9,13 @@ describe(MyHash) do
       expect(test_hash.fetch("kitten")).to(eq("cute"))
     end
   end
+
+  describe("#fetch") do
+    it("can retrieve a specific key's value from a hash of multiple keys and values") do
+      test_hash = MyHash.new()
+      test_hash.store("kitten", "cute")
+      test_hash.store("rat", "ugly")
+      expect(test_hash.fetch("kitten")).to(eq("cute"))
+    end
+  end
 end
